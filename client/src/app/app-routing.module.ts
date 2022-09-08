@@ -15,13 +15,13 @@ const routes: Routes = [
   {path:'',
   runGuardsAndResolvers : 'always',
   canActivate: [AuthGuard],
-  children : [
+  children : 
+  [
   {path:'members',component : MemberListComponent},
-  {path:'members/:id',component : MemberDetailComponent},
+  {path:'members/:username',component : MemberDetailComponent},
   {path:'lists',component : ListsComponent},
   {path:'messages',component : MessagesComponent}
    ]
-
   },
   {path:'errors', component : TestErrorsComponent},
   {path:'not-found', component : NotFoundComponent},
